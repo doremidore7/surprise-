@@ -1,0 +1,1147 @@
+/* ===== BASE ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background:
+    linear-gradient(
+        135deg,
+        #e9d5ff,
+        #c4b5fd,
+        #fbcfe8
+    );
+
+    font-family: "Georgia", serif;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow-x: hidden;
+
+}
+
+
+
+/* ===== PAGES ===== */
+
+
+.page {
+
+    display: none;
+
+    width: 90%;
+
+    max-width: 550px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+
+    padding: 30px;
+
+
+    text-align: center;
+
+
+    background: rgba(255,255,255,0.25);
+
+
+    border-radius: 30px;
+
+
+    backdrop-filter: blur(15px);
+
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,0.25);
+
+
+}
+
+
+
+.page.active {
+
+    display: block;
+
+}
+
+
+
+
+/* ===== TEXTES ===== */
+
+
+h1 {
+
+    color: white;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+
+    text-shadow:
+
+    0 0 15px #c084fc;
+
+}
+
+
+
+h2 {
+
+    color: white;
+
+}
+
+
+
+p {
+
+    color: white;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+
+/* ===== BOUTONS ===== */
+
+
+button {
+
+
+    padding: 14px 25px;
+
+
+    margin: 8px;
+
+
+    border: none;
+
+
+    border-radius: 30px;
+
+
+    background: #c084fc;
+
+
+    color: white;
+
+
+    font-size: 16px;
+
+
+    cursor: pointer;
+
+
+    transition: 0.3s;
+
+
+    box-shadow:
+
+    0 5px 15px rgba(0,0,0,0.2);
+
+
+}
+
+
+
+button:hover {
+
+
+    background: #a855f7;
+
+
+    transform: scale(1.1);
+
+
+}
+
+
+
+button:active {
+
+
+    background: #7c3aed;
+
+
+    transform: scale(1.2);
+
+
+}
+
+
+
+/* ===== ÉTOILES ⭐ ===== */
+
+
+#stars {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+}
+
+
+
+#stars span {
+
+    position: absolute;
+
+    font-size: 25px;
+
+    pointer-events: auto;
+
+    cursor: pointer;
+
+    animation: shine 2s infinite alternate;
+
+}
+
+
+
+@keyframes shine {
+
+
+from {
+
+opacity: .5;
+
+}
+
+
+to {
+
+opacity: 1;
+
+transform: scale(1.3);
+
+}
+
+}
+
+
+
+/* ===== ROUE ROYALE 🎡 ===== */
+
+.wheel-container {
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:30px;
+
+}
+
+
+#wheel {
+
+    width:280px;
+    height:280px;
+
+    border-radius:50%;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border:10px solid white;
+
+
+    background:
+    conic-gradient(
+        #f9a8d4 0deg 90deg,
+        #c4b5fd 90deg 180deg,
+        #ddd6fe 180deg 270deg,
+        #fbcfe8 270deg 360deg
+    );
+
+
+    transition:transform 4s ease;
+
+}
+
+
+
+.part {
+
+    position:absolute;
+
+    width:140px;
+
+    height:140px;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    text-align:center;
+
+
+    color:white;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+
+}
+
+
+
+/* chaque texte dans son quartier */
+
+
+.one {
+
+    top:0;
+
+    left:70px;
+
+}
+
+
+
+.two {
+
+    bottom:0;
+
+    left:70px;
+
+}
+
+
+
+.three {
+
+    left:0;
+
+    top:70px;
+
+}
+
+
+
+.four {
+
+    right:0;
+
+    top:70px;
+
+}
+
+
+/* ===== LETTRE 💌 ===== */
+
+
+.letter {
+
+
+    background:#fffaf0;
+
+
+    color:#5a3d4a;
+
+
+    padding:30px;
+
+
+    border-radius:15px;
+
+
+    text-align:left;
+
+
+    font-family:"Segoe Script",
+    "Brush Script MT",
+    cursive;
+
+
+    font-size:18px;
+
+
+    line-height:1.8;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.25);
+
+
+}
+
+
+
+.letter p {
+
+    color:#5a3d4a;
+
+}
+
+
+
+.letter h2 {
+
+    color:#c084fc;
+
+    text-align:center;
+
+}
+
+
+
+/* ===== COUPONS 🎟️ ===== */
+
+
+.coupons {
+
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:15px;
+
+
+}
+
+
+
+.coupon {
+
+
+background:#fffaf0;
+
+
+color:#6b4b5a;
+
+
+width:200px;
+
+
+padding:20px;
+
+
+border-radius:20px;
+
+
+border:3px dashed #c084fc;
+
+
+box-shadow:
+
+0 8px 20px rgba(0,0,0,.2);
+
+
+transition:.3s;
+
+
+}
+
+
+
+.coupon:hover {
+
+
+transform:
+
+translateY(-10px)
+scale(1.05);
+
+
+}
+
+
+
+.coupon p {
+
+
+color:#6b4b5a;
+
+font-size:14px;
+
+
+}
+
+
+
+
+/* ===== GRAND CŒUR ❤️ ===== */
+
+
+.bigHeart {
+
+
+width:110px;
+
+height:110px;
+
+background:#ff4d8d;
+
+margin:60px auto;
+
+transform:rotate(-45deg);
+
+animation:beat 1s infinite;
+
+
+position:relative;
+
+
+}
+
+
+
+.bigHeart:before,
+.bigHeart:after {
+
+
+content:"";
+
+position:absolute;
+
+width:110px;
+
+height:110px;
+
+background:#ff4d8d;
+
+border-radius:50%;
+
+
+}
+
+
+
+.bigHeart:before {
+
+top:-55px;
+
+left:0;
+
+}
+
+
+
+.bigHeart:after {
+
+top:0;
+
+left:55px;
+
+}
+
+
+
+@keyframes beat {
+
+
+50% {
+
+transform:
+
+rotate(-45deg)
+scale(1.2);
+
+}
+
+
+}
+/* ===== RÉSULTAT DE LA ROUE 🎡 ===== */
+
+#wheelResult {
+
+    color: white;
+
+    font-size: 20px;
+
+    margin-top: 20px;
+
+    text-shadow:
+
+    0 0 10px #c084fc;
+
+}
+
+
+
+/* ===== SCANNER 😂🔍 ===== */
+
+
+.scanner {
+
+    background: rgba(255,255,255,0.2);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    margin: 20px auto;
+
+    animation: scan 2s infinite alternate;
+
+}
+
+
+
+@keyframes scan {
+
+from {
+
+    box-shadow: 0 0 10px white;
+
+}
+
+
+to {
+
+    box-shadow: 0 0 30px #c084fc;
+
+}
+
+}
+
+
+
+/* ===== LETTRE ROMANTIQUE 💌 ===== */
+
+
+.letter {
+
+    background: #fffaf0;
+
+    color: #5a3d4a;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    text-align: left;
+
+    font-family: "Segoe Script",
+    "Brush Script MT",
+    cursive;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,0.25);
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation: ouvrirLettre 1.5s ease;
+
+}
+
+
+
+.letter::before {
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:8px;
+
+    background:#c084fc;
+
+}
+
+
+
+.letter p {
+
+    color:#5a3d4a;
+
+}
+
+
+
+.letter h2 {
+
+    color:#c084fc;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+
+
+@keyframes ouvrirLettre {
+
+
+from {
+
+    opacity:0;
+
+    transform:rotateX(90deg);
+
+}
+
+
+to {
+
+    opacity:1;
+
+    transform:rotateX(0);
+
+}
+
+}
+
+
+
+/* ===== COUPONS 🎟️ ===== */
+
+
+.coupons {
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+
+
+.coupon {
+
+
+    background:#fffaf0;
+
+
+    color:#6b4b5a;
+
+
+    width:200px;
+
+
+    padding:20px;
+
+
+    border-radius:20px;
+
+
+    border:3px dashed #c084fc;
+
+
+    box-shadow:
+
+    0 8px 20px rgba(0,0,0,0.2);
+
+
+    transition:0.3s;
+
+
+    cursor:pointer;
+
+}
+
+
+
+.coupon:hover {
+
+
+    transform:
+
+    translateY(-10px)
+
+    rotate(3deg)
+
+    scale(1.05);
+
+}
+
+
+
+.coupon h3 {
+
+    color:#c084fc;
+
+}
+
+
+
+.coupon p {
+
+    color:#6b4b5a;
+
+    font-size:14px;
+
+}
+/* ===== GRAND CŒUR FINAL ❤️ ===== */
+
+
+.bigHeart {
+
+    width:110px;
+
+    height:110px;
+
+    background:#ff4d8d;
+
+    margin:60px auto;
+
+    position:relative;
+
+    transform:rotate(-45deg);
+
+    animation:beat 1s infinite;
+
+    box-shadow:
+
+    0 0 35px #ff8fab;
+
+}
+
+
+
+.bigHeart::before,
+.bigHeart::after {
+
+    content:"";
+
+    width:110px;
+
+    height:110px;
+
+    background:#ff4d8d;
+
+    border-radius:50%;
+
+    position:absolute;
+
+}
+
+
+
+.bigHeart::before {
+
+    top:-55px;
+
+    left:0;
+
+}
+
+
+
+.bigHeart::after {
+
+    top:0;
+
+    left:55px;
+
+}
+
+
+
+@keyframes beat {
+
+
+0% {
+
+transform:rotate(-45deg) scale(1);
+
+}
+
+
+50% {
+
+transform:rotate(-45deg) scale(1.2);
+
+}
+
+
+100% {
+
+transform:rotate(-45deg) scale(1);
+
+}
+
+
+}
+
+
+
+/* ===== PLUIE DE CŒURS ❤️ ===== */
+
+
+#hearts span {
+
+
+    position:fixed;
+
+    top:-20px;
+
+    font-size:25px;
+
+    animation:fall 5s linear;
+
+    pointer-events:none;
+
+
+}
+
+
+
+@keyframes fall {
+
+
+from {
+
+    transform:translateY(-20px);
+
+    opacity:1;
+
+}
+
+
+to {
+
+    transform:translateY(100vh);
+
+    opacity:0;
+
+}
+
+
+}
+
+
+
+/* ===== ADAPTATION TÉLÉPHONE 📱 ===== */
+
+
+@media(max-width:600px){
+
+
+.page {
+
+    width:95%;
+
+    padding:20px;
+
+}
+
+
+
+h1 {
+
+    font-size:25px;
+
+}
+
+
+
+p {
+
+    font-size:16px;
+
+}
+
+
+
+#wheel {
+
+    width:230px;
+
+    height:230px;
+
+}
+
+
+
+button {
+
+    width:auto;
+
+    font-size:15px;
+
+}
+
+
+
+.letter {
+
+    padding:20px;
+
+    font-size:16px;
+
+}
+
+
+}
+/* ===== RESPONSIVE : TELEPHONE 📱 TABLETTE 📲 ORDINATEUR 💻 ===== */
+
+
+/* Petits téléphones */
+
+@media (max-width: 480px) {
+
+
+    .page {
+
+        width: 95%;
+
+        padding: 20px;
+
+        border-radius: 20px;
+
+    }
+
+
+    h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    p {
+
+        font-size: 15px;
+
+    }
+
+
+    button {
+
+        padding: 12px 20px;
+
+        font-size: 14px;
+
+    }
+
+
+    #wheel {
+
+        width: 220px;
+
+        height: 220px;
+
+    }
+
+
+    .letter {
+
+        font-size: 16px;
+
+        padding: 20px;
+
+    }
+
+
+    .bigHeart {
+
+        transform: rotate(-45deg) scale(0.8);
+
+    }
+
+}
+
+
+
+/* Tablettes */
+
+@media (min-width: 481px) and (max-width: 900px) {
+
+
+    .page {
+
+        width: 80%;
+
+        max-width: 650px;
+
+        padding: 35px;
+
+    }
+
+
+    h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    #wheel {
+
+        width: 270px;
+
+        height: 270px;
+
+    }
+
+
+}
+
+
+
+/* Ordinateurs */
+
+@media (min-width: 901px) {
+
+
+    .page {
+
+        width: 550px;
+
+    }
+
+
+    h1 {
+
+        font-size: 35px;
+
+    }
+
+
+}
+
